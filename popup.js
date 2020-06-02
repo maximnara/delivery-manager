@@ -15,11 +15,16 @@ function render(data) {
         var url = (new URL(item.pageUrl)).hostname;
         var row = document.createElement('div');
         row.className = 'order';
+        var name = document.createElement('div');
+        name.className = 'name';
         var link = document.createElement('a');
-        link.innerText = url + ': ' + item.orderNumber;
+        link.innerText = url;
+        link.title = item.date;
         link.onclick = function () {
             chrome.tabs.create({ url: 'http://' + url, active: true });
         };
+        var orderNumber = document.createElement('span');
+        orderNumber.innerText = ' - ' + item.orderNumber;
         var deleteButton = document.createElement('span');
         deleteButton.className = 'btn-delete';
         deleteButton.title = 'Delivered'
@@ -32,7 +37,9 @@ function render(data) {
                 render(data);
             });
         };
-        row.append(link);
+        name.append(link);
+        name.append(orderNumber);
+        row.append(name);
         row.append(deleteButton);
         ordersElement.append(row);
     });

@@ -8,7 +8,8 @@ chrome.contextMenus.create({
         var pageUrl = info.pageUrl;
         chrome.storage.sync.get('orders', function(data) {
             var orders = data.orders || [];
-            orders.push({ orderNumber, pageUrl });
+            var dateString = (new Date()).toLocaleDateString("en-US", { weekday: 'long', month: 'long', day: 'numeric' });
+            orders.push({ orderNumber, pageUrl, date: dateString });
             chrome.storage.sync.set({'orders': orders}, function() {
                 console.log('Order number saved');
             });
