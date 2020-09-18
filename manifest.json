@@ -2,11 +2,12 @@
     "manifest_version": 2,
     "name": "Delivery manager",
     "description": "Save your delivery and order numbers in online shops. This may help you to manage orders when you have more than two.",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "minimum_chrome_version": "38",
     "permissions": [
         "contextMenus",
-        "storage"
+        "storage",
+        "runtime"
     ],
     "icons": {
         "16": "assets/icon.png",

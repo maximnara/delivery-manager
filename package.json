@@ -1,0 +1,24 @@
+{
+  "name": "delivery-manager",
+  "version": "1.0.2",
+  "description": "Save your delivery and order numbers in online shops.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximnara/delivery-manager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maximnara/delivery-manager/issues"
+  },
+  "homepage": "https://github.com/maximnara/delivery-manager#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2"
+  }
+}
