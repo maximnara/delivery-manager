@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/maximnara/delivery-manager#readme",
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.7.2"
   }
